@@ -1,0 +1,64 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  touch-action: auto;
+}
+
+html {
+  font-size: 13px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.846rem;
+  overflow-x: hidden;
+  overflow-x: scroll;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.307rem;
+}
+h2 {
+  font-size: 1.846rem;
+}
+
+h3 {
+  font-size: 1.231rem;
+}
+h4 {
+  font-size: 1.0769rem;
+}
+h5 {
+  font-size: 1rem;
+}
+h6 {
+  font-size: 0.923rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+}
+@import "container";
+
+#root {
+  height: 100%;
+}
