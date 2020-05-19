@@ -5,6 +5,7 @@ import { SidebarMenu } from "../../constants";
 import MeImage from "../../assets/images/me.jpg";
 import MeImage2 from "../../assets/images/me_2.jpg";
 import { onChangeSidebar } from "../../redux/actions/common";
+import { Link } from "react-router-dom";
 
 const MENUS = [
   {
@@ -54,7 +55,8 @@ class Sidebar extends Component {
             Contacts
           </div> */}
           {MENUS.map((menu) => (
-            <div
+            <Link
+              to={`/#${menu.text}`}
               className={classnames("sidebar__menu__item", {
                 active: common.key === menu.text,
               })}
@@ -63,7 +65,7 @@ class Sidebar extends Component {
             >
               <i className={menu.icon} />
               {menu.text}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

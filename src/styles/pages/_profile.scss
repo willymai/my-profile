@@ -21,12 +21,15 @@
     @media screen and (max-width: 1199px) {
       width: 225px;
     }
+    @media screen and (max-width: 991px) {
+      width: 165px;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     &__img {
       width: 100%;
       height: 260px;
-      // background-image: url(../../assets/images/me.jpg);
-      // background-position: center;
-      // background-size: cover;
       overflow: hidden;
       img {
         width: 100%;
@@ -84,7 +87,7 @@
   
   .social-link {
     a {
-      color: #afd448;
+      color: $main-color-2;
       margin-right: 6px;
     }
   }
@@ -157,11 +160,11 @@
   }
   &__main-block {
     &__content {
+      margin-top: 48px;
       h3 {
-        margin-top: 48px;
         margin-bottom: 12px;
         font-style: italic;
-        color: #89ad29;
+        color: $main-color;
       }
     }
   }
@@ -224,12 +227,6 @@
   .hobbie {
     display: flex;
     align-items: center;
-    // justify-content: center;
-    // flex-direction: column;
-    // width: 50px;
-    // height: 50px;
-    // text-align: center;
-    // margin-right: 40px;
     width: calc(100% / 3);
     margin-bottom: 30px;
     i {
@@ -243,4 +240,81 @@
       font-size: 14px;
     }
   }
+}
+
+.timeline-list {
+  padding-left: 35px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    top: 5px;
+    left: 10px;
+    height: 97%;
+
+    background-color: $icon-color;
+  }
+}
+.timeline {
+  position: relative;
+  margin-top: 36px;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 13px;
+    height: 13px;
+    left: -31px;
+    top: 5px;
+    border-radius: 50%;
+
+    background-color: $icon-color;
+  }
+  &__date {
+    padding: 0 12px;
+    position: relative;
+    margin-bottom: 6px;
+    font-weight: 500;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid $icon-color;
+    color: $main-color;
+  }
+  &__study {
+
+  }
+  &__place {
+    padding-top: 5px;
+    font-style: italic;
+  }
+  &__text {
+    margin-top: 12px;
+  }
+}
+
+
+// contact
+.contact-info {
+  margin-top: 36px;
+}
+.contact-item {
+  i {
+    color: $main-color-2;
+    margin-right: 15px;
+  }
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  p {
+    padding-left: 5px;
+    display: inline-block;
+  }
+}
+
+.map-wrapper {
+  margin-top: 36px;
+  width: 100%;
+  height: 300px;
+  position: relative;
 }

@@ -1,9 +1,21 @@
 import React, { Component } from "react";
-import { Layout, Row, Col } from "antd";
+import { Row, Col } from "antd";
 import Sidebar from "../components/profile/Sidebar";
 import Detail from "../components/profile/Detail";
+import { SidebarMenu } from "../constants";
+import { onChangeSidebar } from "../redux/actions/common";
+import { connect } from "react-redux";
 
-export default class Profile extends Component {
+class Profile extends Component {
+  componentDidMount() {
+    const {
+      location: { hash },
+    } = this.props;
+    if (!!hash && Object.values(SidebarMenu).indexOf(hash.substr(1)) !== -1) {
+      this.props.onChangeSidebar(hash.substr(1));
+    }
+  }
+
   render() {
     return (
       <div className="profile">
@@ -21,3 +33,5 @@ export default class Profile extends Component {
     );
   }
 }
+
+export default connect(() => ({}), { onChangeSidebar })(Profile);

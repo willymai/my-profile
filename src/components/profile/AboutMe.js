@@ -53,7 +53,7 @@ export default class AboutMe extends Component {
             <div className="page__block__content">
               <div className="skills">
                 {SKILLS.map(skill => (
-                  <div className="skill-item">
+                  <div className="skill-item" key={skill.name}>
                     <div className="skill__name"><span>{skill.name}</span></div>
                     <div className="skillbar">
                       <div className="skillbar-bar" style={{width: skill.percent}}></div>
@@ -73,7 +73,7 @@ export default class AboutMe extends Component {
               <div className="hobbies">
                 <div className="hobbie">
                   <i className="fas fa-rss-square" />
-                  <span>Tech</span>
+                  <span>News</span>
                 </div>
 
                 <div className="hobbie">
