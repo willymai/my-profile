@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { SidebarMenu } from "../../constants";
-import MeImage from "../../assets/images/me.jpg";
+// import MeImage from "../../assets/images/me.jpg";
 import MeImage2 from "../../assets/images/me_2.jpg";
 import { onChangeSidebar } from "../../redux/actions/common";
 import { Link } from "react-router-dom";
@@ -28,32 +28,16 @@ const MENUS = [
 
 class Sidebar extends Component {
   _handleClick = (value) => {
-    this.props.onChangeSidebar(value)
-  }
+    this.props.onChangeSidebar(value);
+  };
   render() {
     const { common } = this.props;
     return (
-      <div className="sidebar">
+      <div className={classnames("sidebar", { "show-menu": common.showMenu })}>
         <div className="sidebar__img">
           <img src={MeImage2} alt="" />
         </div>
         <div className="sidebar__menu">
-          {/* <div className="sidebar__menu__item active">
-            <i className="fas fa-user-edit" />
-            About
-          </div>
-          <div className="sidebar__menu__item">
-            <i className="fas fa-address-card" />
-            Resume
-          </div>
-          <div className="sidebar__menu__item">
-            <i className="fas fa-image" />
-            Portfolio
-          </div>
-          <div className="sidebar__menu__item">
-            <i className="fas fa-map-marked-alt" />
-            Contacts
-          </div> */}
           {MENUS.map((menu) => (
             <Link
               to={`/#${menu.text}`}
@@ -61,7 +45,7 @@ class Sidebar extends Component {
                 active: common.key === menu.text,
               })}
               key={menu.text}
-              onClick={e => this._handleClick(menu.text)}
+              onClick={(e) => this._handleClick(menu.text)}
             >
               <i className={menu.icon} />
               {menu.text}
@@ -78,7 +62,7 @@ const mapStateToProps = ({ common }) => ({
 });
 
 const mapDispatchToProps = {
-  onChangeSidebar
+  onChangeSidebar,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

@@ -5,6 +5,7 @@ import Detail from "../components/profile/Detail";
 import { SidebarMenu } from "../constants";
 import { onChangeSidebar } from "../redux/actions/common";
 import { connect } from "react-redux";
+import Header from "../components/profile/Header";
 
 class Profile extends Component {
   componentDidMount() {
@@ -19,12 +20,13 @@ class Profile extends Component {
   render() {
     return (
       <div className="profile">
+        <Header />
         <div className="container">
           <Row gutter={15}>
             <Col md={6}>
               <Sidebar />
             </Col>
-            <Col md={18}>
+            <Col md={18} xs={24}>
               <Detail />
             </Col>
           </Row>
