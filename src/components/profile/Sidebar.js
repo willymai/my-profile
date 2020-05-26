@@ -18,7 +18,7 @@ const MENUS = [
   },
   {
     icon: "fas fa-image",
-    text: SidebarMenu.Porfolio,
+    text: SidebarMenu.Portfolio,
   },
   {
     icon: "fas fa-map-marked-alt",

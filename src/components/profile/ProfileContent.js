@@ -13,7 +13,7 @@ class ProfileContent extends Component {
       <>
         <AboutMe active={common.key === SidebarMenu.About}/>
         <Resume active={common.key === SidebarMenu.Resume}/>
-        <Portfolio active={common.key === SidebarMenu.Porfolio}/>
+        <Portfolio active={common.key === SidebarMenu.Portfolio}/>
         <Contact active={common.key === SidebarMenu.Contact}/>
       </>
     )
