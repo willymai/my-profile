@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classnames from "classnames";
 import { Row, Col } from "antd";
 import Carousel, { Modal, ModalGateway } from "react-images";
+import PageFooter from "./PageFooter";
 
 const PortfolioList = [
   {
@@ -102,7 +103,7 @@ export default class Portfolio extends Component {
               <div className="portfolio__list">
                 <Row gutter={30}>
                   {PortfolioList.map((item, index) => (
-                    <Col md={8} sm={12} xs={24} key={item.id}>
+                    <Col lg={8} sm={12} xs={24} key={item.id}>
                       <div className="portfolio__item">
                         <div className="portfolio__item-inner">
                           <div>
@@ -138,6 +139,7 @@ export default class Portfolio extends Component {
             </div>
           </div>
         </div>
+        <PageFooter />
         <ModalGateway>
           {modalIsOpen ? (
             <Modal onClose={this._handleModalClose}>

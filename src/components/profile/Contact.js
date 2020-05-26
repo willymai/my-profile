@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import classnames from "classnames";
 import { Map, Marker, GoogleApiWrapper } from "google-maps-react";
+import PageFooter from "./PageFooter";
 const contacts = [
   {
     icon: "fas fa-map-marker-alt",
@@ -62,6 +63,7 @@ class Contact extends Component {
             </Map>
           </div>
         </div>
+        <PageFooter />
       </section>
     );
   }

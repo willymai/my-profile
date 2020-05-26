@@ -5,9 +5,11 @@
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
     "antd": "^4.2.3",
+    "aws-sdk": "^2.683.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.2",
     "google-maps-react": "^2.0.6",
+    "mime": "^2.4.5",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -27,7 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build --prod && surge ./build"
+    "deploy-surge": "npm run build --prod && surge ./build",
+    "deploy": "npm run build --prod && node publish.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "colors": "^1.4.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.5.0",

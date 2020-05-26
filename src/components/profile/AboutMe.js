@@ -19,6 +19,10 @@ const SKILLS = [
     name: "ReactJS",
     percent: "80%"
   },
+  {
+    name: "GraphQL",
+    percent: "59%"
+  }
 ]
 
 export default class AboutMe extends Component {

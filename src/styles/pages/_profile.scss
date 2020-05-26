@@ -50,6 +50,14 @@
       height: 100%;
       object-fit: cover;
     }
+    @include media-breakpoint-down(lg) {
+      height: 225px;
+    }
+
+    @include media-breakpoint-down(md) {
+      height: 165px;
+    }
+
   }
   &__menu {
     width: 100%;
@@ -238,6 +246,16 @@
     display: block;
     height: 24px;
   }
+
+  @include media-breakpoint-down(md) {
+    flex-basis: 25%;
+  }
+  @include media-breakpoint-down(xs) {
+    flex-basis: 35%;
+  }
+  @media screen and (max-width: 350px) {
+    flex-basis: 42%;
+  }
 }
 .skillbar {
   align-self: center;
@@ -276,6 +294,13 @@
     span {
       padding-left: 10px;
       font-size: 14px;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 50%;
+    }
+    @include media-breakpoint-down(xs) {
+      width: 100%;
     }
   }
 }
@@ -494,6 +519,9 @@
       position: absolute;
       left: 0;
       top: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 100%;
     }
   }
   &__image-wrapper {
