@@ -13,6 +13,7 @@
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-google-maps": "^9.4.5",
     "react-images": "^1.1.7",
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",

@@ -4,12 +4,16 @@ import PageFooter from "./PageFooter";
 
 const SKILLS = [
   {
+    name: "HTML",
+    percent: "97%"
+  },
+  {
     name: "CSS / CSS3",
-    percent: "100%"
+    percent: "97%"
   },
   {
     name: "SCSS / LESS",
-    percent: "100%"
+    percent: "97%"
   },
   {
     name: "Javascript",
@@ -20,9 +24,17 @@ const SKILLS = [
     percent: "80%"
   },
   {
-    name: "GraphQL",
-    percent: "59%"
+    name: "React Native",
+    percent: "30%"
+  },
+  {
+    name: "Flutter",
+    percent: "45%"
   }
+  // {
+  //   name: "GraphQL",
+  //   percent: "59%"
+  // }
 ]
 
 export default class AboutMe extends Component {
