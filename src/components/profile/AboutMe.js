@@ -25,12 +25,12 @@ const SKILLS = [
   },
   {
     name: "React Native",
-    percent: "30%"
+    percent: "40%"
   },
-  {
-    name: "Flutter",
-    percent: "45%"
-  }
+  // {
+  //   name: "Flutter",
+  //   percent: "25%"
+  // }
   // {
   //   name: "GraphQL",
   //   percent: "59%"

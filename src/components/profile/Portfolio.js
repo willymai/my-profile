@@ -6,6 +6,26 @@ import PageFooter from "./PageFooter";
 
 const PortfolioList = [
   {
+    id: "cwm",
+    src: "https://i.imgur.com/AAoWMXA.jpg",
+    title: "ComeWithMe Web",
+    description: `Come With Me is a platform for sharing time between the gamers community
+    which allows gamers making their bookings to be able to accompany other
+    experienced gamers with a set of skills and tips that can guide them to
+    conquer higher challenges while sharing gaming interests and excitement.`,
+    href: "http://website-cwm.surge.sh/"
+  },
+  {
+    id: "cwm-mobile",
+    src: ["https://i.imgur.com/KXjsKgD.jpg", "https://i.imgur.com/eGMbhHF.jpg"],
+    title: "ComeWithMe Mobile",
+    description: `Come With Me is a platform for sharing time between the gamers community
+    which allows gamers making their bookings to be able to accompany other
+    experienced gamers with a set of skills and tips that can guide them to
+    conquer higher challenges while sharing gaming interests and excitement.`,
+    href: "https://apps.apple.com/vn/app/come-with-me-in-next-era/id1530665551"
+  },
+  {
     id: "1",
     src: "https://i.imgur.com/AN7XO6X.jpg",
     title: "Verkada",
@@ -54,7 +74,7 @@ const PortfolioList = [
     title: "medicplus",
     sub: "",
     href: "http://swlabs.co/medicplus/",
-    description: `MedicPlus is a medical, health, clinic HTML template created especially for Health & Medical Related Projects.`
+    description: `MedicPlus is a medical, health, clinic HTML template created especially for Health & Medical Related Projects.`,
   },
 
   {
@@ -63,7 +83,7 @@ const PortfolioList = [
     title: "VFM",
     sub: "",
     href: "https://vfm.com.vn/",
-    description: "VietFund Management"
+    description: "VietFund Management",
   },
 ];
 
@@ -124,9 +144,9 @@ export default class Portfolio extends Component {
                                 >
                                   <i className="fas fa-search-plus" />
                                 </div>
-                                <a href={item.href} className="icon-link">
+                                {item.href && <a href={item.href} className="icon-link" target="_blank" rel="noopener noreferrer">
                                   <i className="fas fa-link" />
-                                </a>
+                                </a>}
                               </div>
                             </div>
                           </div>
@@ -146,7 +166,7 @@ export default class Portfolio extends Component {
               <Carousel
                 currentIndex={currentIndex}
                 views={PortfolioList.map((item) => ({
-                  source: item.src,
+                  source: Array.isArray(item.src) ? item.src[0] : item.src,
                   description: item.description,
                 }))}
                 components={{
@@ -154,6 +174,12 @@ export default class Portfolio extends Component {
                     const currentItem = views[currentIndex];
                     return <div>{currentItem.description}</div>;
                   },
+                  View: ({data, ...params}) => {
+                    console.log("parms", params);
+                    return <div className="react-images__view">
+                      <img src={data.source} alt="" />
+                    </div>
+                  }
                 }}
               />
             </Modal>

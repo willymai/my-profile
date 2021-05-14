@@ -30,14 +30,14 @@ const EXP = [
     `,
   },
   {
-    date: "Dec 2017 - Present",
+    date: "Dec 2017 - Mar 2020",
     job: "Frontend Developer",
     company: "Mstage Co., Ltd",
     text: (
       <div>
         Mstage is a Singapore startup company with young employees. This is good
-        company and enviroment that I can improve myself quickly about tech skill and soft skill. My teamates
-        and I build tools:
+        company and enviroment that I can improve myself quickly about tech
+        skill and soft skill. My teamates and I build tools:
         <br />
         - Userkit: help client analyze the actions users take in your
         application and set up atures that help convert users. The platform
@@ -52,6 +52,19 @@ const EXP = [
         <br />- Verkada Floorplans: project is a part of the Verkada, which is
         the display of a building in 3D and let you manage, track, and analyze
         it in real-time base on the data returned from the cameras.
+      </div>
+    ),
+  },
+  {
+    date: "June 2020 - Present",
+    job: "Frontend Developer",
+    company: "Comewithme",
+    text: (
+      <div>
+        Come With Me is a platform for sharing time between the gamers community
+        which allows gamers making their bookings to be able to accompany other
+        experienced gamers with a set of skills and tips that can guide them to
+        conquer higher challenges while sharing gaming interests and excitement.
       </div>
     ),
   },
