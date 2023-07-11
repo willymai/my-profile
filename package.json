@@ -5,7 +5,7 @@
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
     "antd": "^4.2.3",
-    "aws-sdk": "^2.683.0",
+    "aws-sdk": "^2.1414.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.2",
     "google-maps-react": "^2.0.6",
